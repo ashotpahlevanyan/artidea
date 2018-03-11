@@ -1,0 +1,13 @@
+/* style for About Us==============================
+===================================================*/
+
+.artists {
+	margin: -15px;
+	@extend %textAlignCenter;
+	li {
+		display: inline-block;
+		@extend %verticalAlignTop;
+		width: 170px;
+		margin: 15px;
+	}
+}

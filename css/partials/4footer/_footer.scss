@@ -1,0 +1,64 @@
+/* Style for FOOTER ===============
+==========================================*/
+footer {
+	&.foot {
+		@extend %bgColor3;
+		padding: 46px 0 25px;
+	}
+	margin-top: 40px;
+	.nav {
+		display: block;
+		float: none !important;
+		a {
+			@extend %fontColor4;
+			padding: 12px;
+		}
+	}
+	.footLogo {
+		display: block;
+		height: 67px;
+		width: 279px;
+		vertical-align: middle;
+	}
+	.copyright {
+		@extend %fontColor4;
+		margin-top: 10px;
+		text-align: right;
+		padding-right: 18px;
+		a{
+			@extend %fontColor4;
+			&:hover {
+				@extend %fontColor1;
+				text-decoration: none;
+			}
+		}
+	}
+}
+/* media queries */
+
+@media (max-width: 1169px){
+	.footLogo, .nav{
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 767px){
+	footer{
+		.nav{
+			display: none;
+		}
+		.footLogo {
+			float: none !important;
+			margin: 0 auto;
+		}
+		.copyright {
+			text-align: center;
+			padding-right: 0;
+		}
+		.footNavPanel {
+			float: none !important;
+			margin: 0 auto;
+		}
+	}
+}

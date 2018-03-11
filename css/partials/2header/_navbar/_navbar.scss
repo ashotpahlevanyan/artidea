@@ -1,0 +1,91 @@
+/* style for navbar
+===================================================*/
+
+.navbar {
+	@extend %bgColor2;
+	@extend %borderColor2;
+	@include border-radius(0);
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	margin-bottom: 0;
+	.navbar-collapse {
+		padding: 0;
+	}
+	.nav {
+		margin-left: -24px;
+	}
+	.container {
+		@extend %positionRelative;
+	}
+}
+
+.nav {
+	li {
+		a {
+			@extend %fontYanoneKaffe;
+			@extend %fontColor2;
+			@extend %outlineNone;
+			font-size: 22px;
+			font-weight: 200;
+			line-height: 26px;
+			padding: 24px;
+			&:hover, &:focus {
+				@extend %bgNone;
+				@extend %fontColor1;
+			}
+		}
+		&.active {
+			a {
+				@extend %fontColor1;
+			}
+		}
+	}
+}
+
+.navbar-toggle {
+	@extend %bgColorTransparent;
+	@extend %bgImageNone;
+	border: 2px solid $colorLinks;
+	border-radius: 5px;
+	margin: 19px 10px;
+	.icon-bar {
+		display: block;
+		@extend %bgColor1;
+		border-radius: 1px;
+		width: 22px;
+		height: 2px;
+	}
+	.icon-bar + .icon-bar {
+		margin-top: 4px;
+	}
+}
+
+
+/* media queries */
+
+@media (max-width: 767px) {
+	.navbar{
+		width: 100%;
+		.nav {
+			margin-left: 0;
+		}
+	}
+	.nav {
+		width: 100%;
+		float: none !important;
+		margin: 0;
+		li {
+			display: block;
+			width: 100%;
+			a {
+				width: 100%;
+				padding: 10px 10px 10px 20px;
+				background: none;
+				&:hover {
+					color: $colorWhite;
+					background-color: $colorLinks;
+				}
+			}
+		}
+	}
+}

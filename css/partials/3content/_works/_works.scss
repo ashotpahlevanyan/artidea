@@ -1,0 +1,45 @@
+/*style for our works========================
+=============================================*/
+
+.workItems {
+	@extend %textAlignCenter;
+	margin: -15px;
+	li {
+		@extend %textAlignLeft;
+		display: inline-block;
+		margin: 15px;
+		width: 270px;
+		h3 {
+			margin-bottom: 10px;
+		}
+		div {
+			@extend %bgColor2;
+			padding: 15px;
+			border: 1px solid $colorBorder;
+		}
+	}
+	.workLink {
+		display: block;
+		//width: 100%;
+		//height: auto;
+		&:hover {
+			opacity: 0.7;
+			-moz-transition: all 0.25s ease 0s;
+			-o-transition: all 0.25s ease 0s;
+			-webkit-transition: all 0.25s ease 0s;
+			transition: all 0.25s ease 0s;
+		}
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+
+/* works popup ==========================================
+=========================================================*/
+
+
+//background: url(../images/camera-loader.gif) no-repeat 50% 40%;

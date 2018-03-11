@@ -1,0 +1,53 @@
+/* style for popup slider ==========================
+====================================================*/
+.popupContainer {
+	z-index: 1000;
+	.carousel {
+		@extend %positionRelative;
+		.left {
+			@extend %positionAbsolute;
+			width: 124px;
+			height: 124px;
+			top: 40%;
+			left: 34px;
+			z-index: 1500;
+			background: url(../images/prev.png) no-repeat 0 0px;
+		}
+		.right {
+			@extend %positionAbsolute;
+			width: 124px;
+			height: 124px;
+			top: 40%;
+			right: 34px;
+			z-index: 1500;
+			background: url(../images/next.png) no-repeat 0 0px;
+		}
+		
+		&:hover {
+			.right {
+				visibility: visible;
+				background: url(../images/next.png) no-repeat 0 -124px;
+			}
+			.left {
+				background: url(../images/prev.png) no-repeat 0 -124px;
+			} 
+		}
+	}
+}
+
+#carouselPopup {
+	margin: 200px auto;
+	//height: 600px;
+	.carousel-control.right, .carousel-control.left {
+		background-color: none;
+	}
+	.item {
+		margin: 0 auto;
+		width: 800px;
+		height: 600px;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}

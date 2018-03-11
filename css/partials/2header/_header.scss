@@ -1,0 +1,13 @@
+/* Header for site==========================
+============================================*/
+
+header {
+	@extend %borderColor2;
+	@extend %bgColor2;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+}
+
+@import "_navbar/navbar";
+@import "_socials/socials";
+

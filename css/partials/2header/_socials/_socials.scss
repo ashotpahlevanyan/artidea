@@ -1,0 +1,42 @@
+/* style for socials */
+.socialButtons {
+	margin-top: 26px;
+	padding-right: 20px;
+	li {
+		display: inline-block;
+		@extend %verticalAlignMiddle;
+		margin-left: 4px;
+		a {
+			display: block;
+			width: 26px;
+			height: 26px;
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+		&.facebook {
+			a {
+				background-image: url(../images/follow_icon1.png);
+			}
+		}
+		&.twitter {
+			a {
+				background-image: url(../images/follow_icon2.png);
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.socialButtons {
+		position: absolute; 
+		left: 11px;
+	}
+}
+
+@media (min-width: 768px) {
+	.socialButtons {
+		position: absolute;
+		right: 0;
+	}
+}

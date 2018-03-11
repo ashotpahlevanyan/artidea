@@ -1,0 +1,72 @@
+/* style for blog ===========================
+=============================================*/
+
+.blogItem {
+	display: block;
+	margin-bottom: 26px;
+	padding-bottom: 22px;
+	border-bottom: 1px solid #d4d6d7;
+	.blogPostInfo {
+		margin: 10px 0;
+		a {
+			@extend %fontColor3;
+			&:hover, &:focus {
+				@extend %fontColor1;
+				text-decoration: none;
+			}
+		}
+		img {
+			@extend %verticalAlignMiddle;
+		}
+	}
+	p {
+		margin-top: 12px;
+	}
+	p:first-child {
+		margin-top: 0;		 
+	}
+	.blogDetails {
+		display: table-row;
+		div {
+			@extend %verticalAlignTop;
+			display: table-cell;
+		}
+		div + div {
+			padding-left: 29px;
+		}
+	}
+}
+
+
+/* Media queries ==========================
+===========================================*/
+@media (max-width: 600px) {
+	.blogItem {
+		.blogDetails {
+			display: block;
+			text-align: center;
+			div {
+				display: block;
+			}
+			div + div {
+				text-align: left;
+				padding: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.blogPostInfo {
+		div {
+			float: none !important;
+		}
+	}
+	.blogItem {
+		ul {
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,61 @@
+/*style for mini carousel=======================
+================================================*/
+
+
+#carouselMini {
+	.carousel-control.left {
+		background: url(../images/prev2.png) no-repeat 0 0;
+		&:hover{
+			background-position: 0 -28px;
+
+		}
+	}
+	.carousel-control.right {
+		background: url(../images/next2.png) no-repeat 0 0;
+		&:hover{
+			background-position: 0 -28px;
+
+		}
+	}
+	.carousel-control {
+		@extend %positionAbsolute;
+		top: -65px;
+		height: 28px;
+		width: 16px;
+		&.left{
+			left: auto;
+			right: 27px;
+		}
+	}
+}
+
+.review {
+	@extend %bgColor2;
+	@extend %positionRelative;
+	@include border-radius(7px);
+	border: 1px solid $colorBorder;
+	padding: 16px 16px 10px;
+	margin-bottom: 47px;
+	p {
+		margin-bottom: 12px;
+	}
+	a {
+		@extend %fontColor5;
+		display: block;
+		font-size: 18px;
+		font-weight: bold;
+		margin-left: 75px;
+		&:hover {
+			text-decoration: none;
+			@extend %fontColor1;
+		}
+	}
+	.img-circle {
+		@extend %positionAbsolute;
+		bottom: -20px;
+	}
+}
+
+.clientReviews {
+	@extend %listStyleNone;
+}

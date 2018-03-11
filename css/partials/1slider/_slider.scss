@@ -1,0 +1,104 @@
+/* Style for SLIDER ===============
+==========================================*/
+
+#carouselBootstrap {
+	.carousel-control.right, .carousel-control.left {
+		background-image: none;
+	}
+
+	&.carousel, .fade {
+		opacity: 1;
+		.item {
+			display: block !important;
+			@extend %transitionOpacity1;
+			@extend %positionAbsolute;
+			left: 0 !important;
+			opacity: 0.5;
+			top: 0;
+			width: 100%;
+			height: auto;
+			z-index: 1;
+			&:first-child {
+				@extend %positionRelative;
+			}
+
+			&.active {
+				opacity: 1;
+				@extend %transitionOpacity2;
+				z-index: 2;
+			}
+			img {
+				max-width: 100%;
+				height: auto;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	&.carousel {
+		.left {
+			@extend %positionAbsolute;
+			width: 124px;
+			height: 124px;
+			top: 40%;
+			left: 17%;//34px;
+			z-index: 100;
+			background: url(../images/prev.png) no-repeat 0 0px;
+			&:hover {
+				background: url(../images/prev.png) no-repeat 0 -124px;
+			}
+		}
+		.right {
+			@extend %positionAbsolute;
+			width: 124px;
+			height: 124px;
+			top: 40%;
+			right: 17%;//34px;
+			z-index: 100;
+			background: url(../images/next.png) no-repeat 0 0px;
+			&:hover {
+				visibility: visible;
+				background: url(../images/next.png) no-repeat 0 -124px;
+			}
+		}
+	}
+}
+
+
+
+
+@media (max-width: 1400px) {
+	#carouselBootstrap {
+		.carousel {
+			.left {
+				left: 34px;
+			}
+			.right {
+				right: 34px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	#carouselBootstrap.carousel {
+		.left {
+			left: 20px;
+			width: 62px;
+			height: 62px;
+			background: url(../images/prev_small.png) no-repeat 0 0px;
+			&:hover {
+				background: url(../images/prev_small.png) no-repeat 0 -62px;
+			}
+		}
+		.right {
+			right: 20px;
+			height: 62px;
+			width: 62px;
+			background: url(../images/next_small.png) no-repeat 0 0px;
+			&:hover {
+				background: url(../images/next_small.png) no-repeat 0 -62px;
+			}
+		}
+	}
+}

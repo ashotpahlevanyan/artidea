@@ -1,0 +1,77 @@
+/*style for common elements ================================
+============================================================*/
+
+
+section {
+	&.infoBlock {
+		padding-top: 27px;
+	}
+}
+
+.heading {
+	margin-bottom: 20px;
+	border-bottom: 1px solid #d4d6d7;
+}
+.categoryList {
+	.heading {
+		@extend %cursorPointer;
+	}
+}
+.more {
+	span{
+		@extend %fontYanoneKaffe;
+	}
+	&:hover, &:focus {
+		@extend %fontColor3;
+		text-decoration: none;
+	}
+}
+
+h3 {
+	a {
+		@extend %fontColor6;
+		font-size: 20px;
+		line-height: 22px;
+		&:hover {
+			@extend %textDecorNone;
+			@extend %fontColor1;
+		}
+	}
+}
+
+.recentPosts {
+	list-style: none;
+	.postItem {
+		display: table-row;
+		.postInfo {
+			display: table-cell;
+			@extend %verticalAlignTop;
+			padding-left: 20px; 
+			padding-bottom: 10px;
+		}
+	}
+}
+
+.linksList {
+	@extend %listStyleNone;
+	li {
+		background: url(../images/list_arrow.png) left 8px no-repeat;
+		padding-left: 20px;
+		margin-bottom: 5px;
+	}
+}
+
+/* media queries */
+
+@media (max-width: 767px) {
+	section {
+		&.infoBlock {
+			padding-top: 15px;
+		}
+	}
+	.categoryList.unit {
+		ul {
+			display: none;
+		}
+	}
+}

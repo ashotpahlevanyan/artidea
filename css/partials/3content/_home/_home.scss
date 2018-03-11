@@ -1,0 +1,85 @@
+/* style for home page =================================
+========================================================*/
+
+.postThumbnail {
+	@extend %positionRelative;
+	@extend %verticalAlignTop;
+	display: table-cell;
+	padding-bottom: 10px;
+	width: 70px;
+	height: 56px;
+	img{
+		width: 70px;
+		height: 56px;
+	}
+	.zoom {
+		display: none;
+		@extend %positionAbsolute;
+		width: 33px;
+		height: 34px;
+		z-index: 100;
+		left: 20%;
+		top: 10%;
+		background: url(../images/plus.png) no-repeat;
+	}
+	&:hover {
+		opacity: 0.7;
+		.zoom {
+			display: block;
+		}
+	}
+}
+
+.dateContainer {
+	display: table-cell;
+	padding-bottom: 10px;
+}
+.date, .numberIndex {
+	@extend %bgColor1;
+	@extend %fontColor4;
+	@extend %fontYanoneKaffe;
+	@include border-radius(3px);
+	text-align: center;
+	padding: 6px 6px 10px;
+	span {
+		display: block;
+	}
+}
+.date {
+	width: 70px;
+	height: 56px;
+	span {
+		font-size: 20px;
+		line-height: 22px;
+	}
+}
+.numberIndex {
+	width: 47px;
+	height: 47px;
+	span {
+		font-size: 30px;
+		line-height: 32px;
+	}
+}
+
+.latestScratches {
+	@extend %textAlignCenter;
+	margin: -15px;
+	a {
+		display: inline-block;
+		width: 70px;
+		height: 56px;
+		margin: 15px;
+		&:hover {
+			opacity: 0.7;
+			-moz-transition: all 0.25s ease 0s;
+			-o-transition: all 0.25s ease 0s;
+			-webkit-transition: all 0.25s ease 0s;
+			transition: all 0.25s ease 0s;
+		}
+		img {
+			width: 70px;
+			height: 56px;
+		}
+	}
+}

@@ -34,7 +34,8 @@ $(document).ready(function(){
 
 
 	$("#thumbs li a").click(function() {
-		
+		$('#thumbs li').removeClass('active');
+		$(this).parent().addClass('active');
 		$("#wrapperSlides img").attr({"src": $(this).attr("href"), "title": $("> img", this).attr("title")
 		});
 
